@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Student));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pBox_profile = new System.Windows.Forms.PictureBox();
@@ -44,10 +45,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.cBox_class = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btn_clear = new System.Windows.Forms.Button();
-            this.btn_diamond_3 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btn_diamond_2 = new System.Windows.Forms.Button();
+            this.btn_diamond_3 = new System.Windows.Forms.Button();
             this.btn_diamond_1 = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btn_comment = new System.Windows.Forms.Button();
             this.lbl_border_bottom = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,10 +275,8 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.btn_clear);
-            this.panel6.Controls.Add(this.btn_diamond_3);
-            this.panel6.Controls.Add(this.btn_diamond_2);
-            this.panel6.Controls.Add(this.btn_diamond_1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(812, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
@@ -283,50 +284,72 @@
             this.panel6.Size = new System.Drawing.Size(140, 55);
             this.panel6.TabIndex = 5;
             // 
-            // btn_clear
+            // panel8
             // 
-            this.btn_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_clear.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_clear.Location = new System.Drawing.Point(90, 16);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(23, 23);
-            this.btn_clear.TabIndex = 0;
-            this.btn_clear.Text = "C";
-            this.btn_clear.UseVisualStyleBackColor = false;
-            // 
-            // btn_diamond_3
-            // 
-            this.btn_diamond_3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_diamond_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_diamond_3.Location = new System.Drawing.Point(69, 16);
-            this.btn_diamond_3.Name = "btn_diamond_3";
-            this.btn_diamond_3.Size = new System.Drawing.Size(23, 23);
-            this.btn_diamond_3.TabIndex = 0;
-            this.btn_diamond_3.Text = "D";
-            this.btn_diamond_3.UseVisualStyleBackColor = true;
+            this.panel8.Controls.Add(this.btn_diamond_2);
+            this.panel8.Controls.Add(this.btn_diamond_3);
+            this.panel8.Controls.Add(this.btn_diamond_1);
+            this.panel8.Location = new System.Drawing.Point(7, 11);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(93, 33);
+            this.panel8.TabIndex = 1;
             // 
             // btn_diamond_2
             // 
             this.btn_diamond_2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_diamond_2.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
+            this.btn_diamond_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_diamond_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_diamond_2.Location = new System.Drawing.Point(48, 16);
+            this.btn_diamond_2.FlatAppearance.BorderSize = 0;
+            this.btn_diamond_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_diamond_2.Location = new System.Drawing.Point(33, 2);
             this.btn_diamond_2.Name = "btn_diamond_2";
-            this.btn_diamond_2.Size = new System.Drawing.Size(23, 23);
+            this.btn_diamond_2.Size = new System.Drawing.Size(28, 28);
             this.btn_diamond_2.TabIndex = 0;
-            this.btn_diamond_2.Text = "D";
             this.btn_diamond_2.UseVisualStyleBackColor = true;
+            // 
+            // btn_diamond_3
+            // 
+            this.btn_diamond_3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_diamond_3.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
+            this.btn_diamond_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_diamond_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_diamond_3.FlatAppearance.BorderSize = 0;
+            this.btn_diamond_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_diamond_3.Location = new System.Drawing.Point(63, 2);
+            this.btn_diamond_3.Name = "btn_diamond_3";
+            this.btn_diamond_3.Size = new System.Drawing.Size(28, 28);
+            this.btn_diamond_3.TabIndex = 0;
+            this.btn_diamond_3.UseVisualStyleBackColor = true;
             // 
             // btn_diamond_1
             // 
             this.btn_diamond_1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_diamond_1.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
+            this.btn_diamond_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_diamond_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_diamond_1.Location = new System.Drawing.Point(27, 16);
+            this.btn_diamond_1.FlatAppearance.BorderSize = 0;
+            this.btn_diamond_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_diamond_1.Location = new System.Drawing.Point(3, 2);
             this.btn_diamond_1.Name = "btn_diamond_1";
-            this.btn_diamond_1.Size = new System.Drawing.Size(23, 23);
+            this.btn_diamond_1.Size = new System.Drawing.Size(28, 28);
             this.btn_diamond_1.TabIndex = 0;
-            this.btn_diamond_1.Text = "D";
             this.btn_diamond_1.UseVisualStyleBackColor = true;
+            // 
+            // btn_clear
+            // 
+            this.btn_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_clear.BackColor = System.Drawing.Color.Transparent;
+            this.btn_clear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clear.BackgroundImage")));
+            this.btn_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clear.FlatAppearance.BorderSize = 0;
+            this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_clear.Location = new System.Drawing.Point(106, 13);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(28, 28);
+            this.btn_clear.TabIndex = 0;
+            this.btn_clear.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
@@ -379,6 +402,7 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -410,5 +434,6 @@
         private Button btn_diamond_2;
         private Button btn_diamond_1;
         private Button btn_comment;
+        private Panel panel8;
     }
 }
