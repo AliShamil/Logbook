@@ -21,6 +21,7 @@ public partial class MainForm : Form
         {
             UC_Student uc = new(students[i]);
             uc.Dock = DockStyle.Top;
+            uc.Enabled = false;
             pnl_content.Controls.Add(uc);
         }
     }
@@ -44,6 +45,25 @@ public partial class MainForm : Form
             control.Visible = false;
         }
         pnl_topic.Location = new System.Drawing.Point(352, 10);
+        if (!string.IsNullOrWhiteSpace(lbl_topic.Text))
+        {
+            rbtn_mark_all.Enabled = true;
+            foreach (Control item in pnl_content.Controls)
+            {
+                if (item is UC_Student uc)
+                    uc.Enabled = true;
+            }
+        }
+        else
+        {
+            rbtn_mark_all.Enabled = false;
+            foreach (Control item in pnl_content.Controls)
+            {
+                if (item is UC_Student uc)
+                    uc.Enabled = false;
+            }
+        }
+
     }
 
     private void btn_topic_cancel_Click(object sender, EventArgs e)
@@ -53,5 +73,25 @@ public partial class MainForm : Form
             control.Visible = false;
         }
         pnl_topic.Location = new System.Drawing.Point(352, 10);
+    }
+
+
+
+    private void rBtn_regular_CheckedChanged_1(object sender, EventArgs e)
+    {
+        btn_topic.Enabled = true;
+
+    }
+
+    private void rbtn_mark_all_CheckedChanged(object sender, EventArgs e)
+    {
+        foreach(Control control in pnl_content.Controls)
+        {
+            if (control is UC_Student uc)
+            {
+                uc.rBtn_1.Checked = true;
+            }
+
+        }
     }
 }

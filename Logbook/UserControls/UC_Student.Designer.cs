@@ -36,7 +36,7 @@
             this.lbl_no = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_lastIn = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnl_rbtn = new System.Windows.Forms.Panel();
             this.rBtn_3 = new System.Windows.Forms.RadioButton();
             this.rBtn_2 = new System.Windows.Forms.RadioButton();
             this.rBtn_1 = new System.Windows.Forms.RadioButton();
@@ -51,18 +51,24 @@
             this.btn_diamond_1 = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.lbl_comment = new System.Windows.Forms.Label();
+            this.pnl_comment = new System.Windows.Forms.Panel();
+            this.txt_comment = new System.Windows.Forms.TextBox();
             this.btn_comment = new System.Windows.Forms.Button();
+            this.btn_comment_save = new System.Windows.Forms.Button();
+            this.btn_comment_cancel = new System.Windows.Forms.Button();
             this.lbl_border_bottom = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_profile)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnl_rbtn.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.pnl_comment.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel
@@ -77,7 +83,7 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.34652F));
             this.tableLayoutPanel.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel.Controls.Add(this.panel3, 2, 0);
+            this.tableLayoutPanel.Controls.Add(this.pnl_rbtn, 2, 0);
             this.tableLayoutPanel.Controls.Add(this.panel4, 3, 0);
             this.tableLayoutPanel.Controls.Add(this.panel5, 4, 0);
             this.tableLayoutPanel.Controls.Add(this.panel6, 5, 0);
@@ -87,7 +93,7 @@
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 1;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(1183, 55);
+            this.tableLayoutPanel.Size = new System.Drawing.Size(1197, 55);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // panel1
@@ -100,7 +106,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(267, 55);
+            this.panel1.Size = new System.Drawing.Size(270, 55);
             this.panel1.TabIndex = 0;
             // 
             // pBox_profile
@@ -136,43 +142,45 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lbl_lastIn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(267, 0);
+            this.panel2.Location = new System.Drawing.Point(270, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 55);
+            this.panel2.Size = new System.Drawing.Size(141, 55);
             this.panel2.TabIndex = 1;
             // 
             // lbl_lastIn
             // 
             this.lbl_lastIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_lastIn.AutoSize = true;
-            this.lbl_lastIn.Location = new System.Drawing.Point(49, 20);
+            this.lbl_lastIn.Location = new System.Drawing.Point(45, 20);
             this.lbl_lastIn.Name = "lbl_lastIn";
             this.lbl_lastIn.Size = new System.Drawing.Size(41, 15);
             this.lbl_lastIn.TabIndex = 0;
             this.lbl_lastIn.Text = "Last in";
             // 
-            // panel3
+            // pnl_rbtn
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.rBtn_3);
-            this.panel3.Controls.Add(this.rBtn_2);
-            this.panel3.Controls.Add(this.rBtn_1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(406, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(152, 55);
-            this.panel3.TabIndex = 2;
+            this.pnl_rbtn.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_rbtn.Controls.Add(this.rBtn_3);
+            this.pnl_rbtn.Controls.Add(this.rBtn_2);
+            this.pnl_rbtn.Controls.Add(this.rBtn_1);
+            this.pnl_rbtn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_rbtn.Location = new System.Drawing.Point(411, 0);
+            this.pnl_rbtn.Margin = new System.Windows.Forms.Padding(0);
+            this.pnl_rbtn.Name = "pnl_rbtn";
+            this.pnl_rbtn.Size = new System.Drawing.Size(154, 55);
+            this.pnl_rbtn.TabIndex = 2;
             // 
             // rBtn_3
             // 
             this.rBtn_3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBtn_3.AutoSize = true;
             this.rBtn_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtn_3.Location = new System.Drawing.Point(89, 21);
+            this.rBtn_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtn_3.ForeColor = System.Drawing.Color.Red;
+            this.rBtn_3.Location = new System.Drawing.Point(101, 21);
             this.rBtn_3.Name = "rBtn_3";
-            this.rBtn_3.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_3.Size = new System.Drawing.Size(13, 12);
             this.rBtn_3.TabIndex = 0;
             this.rBtn_3.UseVisualStyleBackColor = true;
             // 
@@ -181,9 +189,11 @@
             this.rBtn_2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBtn_2.AutoSize = true;
             this.rBtn_2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtn_2.Location = new System.Drawing.Point(69, 21);
+            this.rBtn_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtn_2.ForeColor = System.Drawing.Color.Yellow;
+            this.rBtn_2.Location = new System.Drawing.Point(65, 21);
             this.rBtn_2.Name = "rBtn_2";
-            this.rBtn_2.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_2.Size = new System.Drawing.Size(13, 12);
             this.rBtn_2.TabIndex = 0;
             this.rBtn_2.UseVisualStyleBackColor = true;
             // 
@@ -191,22 +201,25 @@
             // 
             this.rBtn_1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rBtn_1.AutoSize = true;
+            this.rBtn_1.BackColor = System.Drawing.Color.Transparent;
             this.rBtn_1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtn_1.Location = new System.Drawing.Point(49, 21);
+            this.rBtn_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rBtn_1.ForeColor = System.Drawing.Color.Green;
+            this.rBtn_1.Location = new System.Drawing.Point(29, 21);
             this.rBtn_1.Name = "rBtn_1";
-            this.rBtn_1.Size = new System.Drawing.Size(14, 13);
+            this.rBtn_1.Size = new System.Drawing.Size(13, 12);
             this.rBtn_1.TabIndex = 0;
-            this.rBtn_1.UseVisualStyleBackColor = true;
+            this.rBtn_1.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.cBox_lab);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(558, 0);
+            this.panel4.Location = new System.Drawing.Point(565, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(127, 55);
+            this.panel4.Size = new System.Drawing.Size(128, 55);
             this.panel4.TabIndex = 3;
             // 
             // cBox_lab
@@ -230,7 +243,7 @@
             "    10",
             "    11",
             "    12"});
-            this.cBox_lab.Location = new System.Drawing.Point(35, 15);
+            this.cBox_lab.Location = new System.Drawing.Point(32, 15);
             this.cBox_lab.Name = "cBox_lab";
             this.cBox_lab.Size = new System.Drawing.Size(57, 25);
             this.cBox_lab.TabIndex = 0;
@@ -240,10 +253,10 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.cBox_class);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(685, 0);
+            this.panel5.Location = new System.Drawing.Point(693, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(127, 55);
+            this.panel5.Size = new System.Drawing.Size(128, 55);
             this.panel5.TabIndex = 4;
             // 
             // cBox_class
@@ -267,7 +280,7 @@
             "    10",
             "    11",
             "    12"});
-            this.cBox_class.Location = new System.Drawing.Point(35, 15);
+            this.cBox_class.Location = new System.Drawing.Point(32, 15);
             this.cBox_class.Name = "cBox_class";
             this.cBox_class.Size = new System.Drawing.Size(57, 25);
             this.cBox_class.TabIndex = 0;
@@ -278,10 +291,10 @@
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.btn_clear);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(812, 0);
+            this.panel6.Location = new System.Drawing.Point(821, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(140, 55);
+            this.panel6.Size = new System.Drawing.Size(142, 55);
             this.panel6.TabIndex = 5;
             // 
             // panel8
@@ -345,7 +358,7 @@
             this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clear.FlatAppearance.BorderSize = 0;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clear.Location = new System.Drawing.Point(106, 13);
+            this.btn_clear.Location = new System.Drawing.Point(103, 13);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(28, 28);
             this.btn_clear.TabIndex = 0;
@@ -354,24 +367,89 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.lbl_comment);
+            this.panel7.Controls.Add(this.pnl_comment);
             this.panel7.Controls.Add(this.btn_comment);
+            this.panel7.Controls.Add(this.btn_comment_save);
+            this.panel7.Controls.Add(this.btn_comment_cancel);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(952, 0);
+            this.panel7.Location = new System.Drawing.Point(963, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(231, 55);
+            this.panel7.Size = new System.Drawing.Size(234, 55);
             this.panel7.TabIndex = 6;
+            // 
+            // lbl_comment
+            // 
+            this.lbl_comment.AutoSize = true;
+            this.lbl_comment.Location = new System.Drawing.Point(37, 21);
+            this.lbl_comment.Name = "lbl_comment";
+            this.lbl_comment.Size = new System.Drawing.Size(0, 15);
+            this.lbl_comment.TabIndex = 2;
+            // 
+            // pnl_comment
+            // 
+            this.pnl_comment.Controls.Add(this.txt_comment);
+            this.pnl_comment.Location = new System.Drawing.Point(37, 3);
+            this.pnl_comment.Name = "pnl_comment";
+            this.pnl_comment.Size = new System.Drawing.Size(103, 49);
+            this.pnl_comment.TabIndex = 1;
+            // 
+            // txt_comment
+            // 
+            this.txt_comment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_comment.Location = new System.Drawing.Point(0, 0);
+            this.txt_comment.Multiline = true;
+            this.txt_comment.Name = "txt_comment";
+            this.txt_comment.Size = new System.Drawing.Size(103, 49);
+            this.txt_comment.TabIndex = 0;
+            this.txt_comment.Visible = false;
             // 
             // btn_comment
             // 
-            this.btn_comment.AutoSize = true;
+            this.btn_comment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_comment.BackColor = System.Drawing.Color.Transparent;
+            this.btn_comment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_comment.BackgroundImage")));
+            this.btn_comment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_comment.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_comment.Location = new System.Drawing.Point(15, 15);
+            this.btn_comment.FlatAppearance.BorderSize = 0;
+            this.btn_comment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_comment.Location = new System.Drawing.Point(3, 12);
             this.btn_comment.Name = "btn_comment";
-            this.btn_comment.Size = new System.Drawing.Size(71, 25);
+            this.btn_comment.Size = new System.Drawing.Size(28, 28);
             this.btn_comment.TabIndex = 0;
-            this.btn_comment.Text = "Comment";
-            this.btn_comment.UseVisualStyleBackColor = true;
+            this.btn_comment.UseVisualStyleBackColor = false;
+            this.btn_comment.Click += new System.EventHandler(this.btn_comment_Click);
+            // 
+            // btn_comment_save
+            // 
+            this.btn_comment_save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_comment_save.BackgroundImage")));
+            this.btn_comment_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_comment_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_comment_save.FlatAppearance.BorderSize = 0;
+            this.btn_comment_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_comment_save.Location = new System.Drawing.Point(169, 12);
+            this.btn_comment_save.Name = "btn_comment_save";
+            this.btn_comment_save.Size = new System.Drawing.Size(28, 28);
+            this.btn_comment_save.TabIndex = 0;
+            this.btn_comment_save.UseVisualStyleBackColor = true;
+            this.btn_comment_save.Visible = false;
+            this.btn_comment_save.Click += new System.EventHandler(this.btn_comment_save_Click);
+            // 
+            // btn_comment_cancel
+            // 
+            this.btn_comment_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_comment_cancel.BackgroundImage")));
+            this.btn_comment_cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_comment_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_comment_cancel.FlatAppearance.BorderSize = 0;
+            this.btn_comment_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_comment_cancel.Location = new System.Drawing.Point(203, 13);
+            this.btn_comment_cancel.Name = "btn_comment_cancel";
+            this.btn_comment_cancel.Size = new System.Drawing.Size(28, 28);
+            this.btn_comment_cancel.TabIndex = 0;
+            this.btn_comment_cancel.UseVisualStyleBackColor = true;
+            this.btn_comment_cancel.Visible = false;
+            this.btn_comment_cancel.Click += new System.EventHandler(this.btn_comment_cancel_Click);
             // 
             // lbl_border_bottom
             // 
@@ -379,7 +457,7 @@
             this.lbl_border_bottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbl_border_bottom.Location = new System.Drawing.Point(0, 54);
             this.lbl_border_bottom.Name = "lbl_border_bottom";
-            this.lbl_border_bottom.Size = new System.Drawing.Size(1183, 1);
+            this.lbl_border_bottom.Size = new System.Drawing.Size(1197, 1);
             this.lbl_border_bottom.TabIndex = 1;
             // 
             // UC_Student
@@ -390,21 +468,23 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.MinimumSize = new System.Drawing.Size(900, 0);
             this.Name = "UC_Student";
-            this.Size = new System.Drawing.Size(1183, 55);
+            this.Size = new System.Drawing.Size(1197, 55);
             this.tableLayoutPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_profile)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnl_rbtn.ResumeLayout(false);
+            this.pnl_rbtn.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.pnl_comment.ResumeLayout(false);
+            this.pnl_comment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -415,7 +495,6 @@
         private Label lbl_border_bottom;
         private Panel panel1;
         private Panel panel2;
-        private Panel panel3;
         private Panel panel4;
         private Panel panel5;
         private Panel panel6;
@@ -426,14 +505,20 @@
         private Label lbl_lastIn;
         private RadioButton rBtn_3;
         private RadioButton rBtn_2;
-        private RadioButton rBtn_1;
         private ComboBox cBox_lab;
         private ComboBox cBox_class;
         private Button btn_clear;
         private Button btn_diamond_3;
         private Button btn_diamond_2;
         private Button btn_diamond_1;
-        private Button btn_comment;
         private Panel panel8;
+        private Panel pnl_comment;
+        private TextBox txt_comment;
+        private Button btn_comment_save;
+        private Button btn_comment_cancel;
+        private Button btn_comment;
+        private Label lbl_comment;
+        public Panel pnl_rbtn;
+        public RadioButton rBtn_1;
     }
 }

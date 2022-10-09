@@ -41,7 +41,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.rBtn_3 = new System.Windows.Forms.RadioButton();
+            this.rbtn_mark_all = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,11 +54,11 @@
             this.btn_topic_cancel = new System.Windows.Forms.Button();
             this.btn_topic_save = new System.Windows.Forms.Button();
             this.lbl_topic = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_topic = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rBtn_substitute = new System.Windows.Forms.RadioButton();
+            this.rBtn_regular = new System.Windows.Forms.RadioButton();
             this.lbl_title = new System.Windows.Forms.Label();
             this.pnl_content = new System.Windows.Forms.Panel();
             this.pnl_header.SuspendLayout();
@@ -150,7 +150,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Logbook.Properties.Resources.icons8_diamond_96;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(69, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 23);
@@ -216,7 +216,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel5.Controls.Add(this.rBtn_3);
+            this.panel5.Controls.Add(this.rbtn_mark_all);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(408, 0);
@@ -225,16 +225,18 @@
             this.panel5.Size = new System.Drawing.Size(155, 74);
             this.panel5.TabIndex = 3;
             // 
-            // rBtn_3
+            // rbtn_mark_all
             // 
-            this.rBtn_3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rBtn_3.AutoSize = true;
-            this.rBtn_3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rBtn_3.Location = new System.Drawing.Point(70, 50);
-            this.rBtn_3.Name = "rBtn_3";
-            this.rBtn_3.Size = new System.Drawing.Size(14, 13);
-            this.rBtn_3.TabIndex = 1;
-            this.rBtn_3.UseVisualStyleBackColor = true;
+            this.rbtn_mark_all.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbtn_mark_all.AutoSize = true;
+            this.rbtn_mark_all.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtn_mark_all.Enabled = false;
+            this.rbtn_mark_all.Location = new System.Drawing.Point(70, 50);
+            this.rbtn_mark_all.Name = "rbtn_mark_all";
+            this.rbtn_mark_all.Size = new System.Drawing.Size(14, 13);
+            this.rbtn_mark_all.TabIndex = 1;
+            this.rbtn_mark_all.UseVisualStyleBackColor = true;
+            this.rbtn_mark_all.CheckedChanged += new System.EventHandler(this.rbtn_mark_all_CheckedChanged);
             // 
             // label3
             // 
@@ -313,7 +315,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.pnl_topic);
             this.panel2.Controls.Add(this.lbl_topic);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btn_topic);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(592, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -334,6 +336,7 @@
             // txt_topic
             // 
             this.txt_topic.Location = new System.Drawing.Point(3, 3);
+            this.txt_topic.MaxLength = 100;
             this.txt_topic.Multiline = true;
             this.txt_topic.Name = "txt_topic";
             this.txt_topic.Size = new System.Drawing.Size(160, 51);
@@ -370,19 +373,20 @@
             this.lbl_topic.Size = new System.Drawing.Size(0, 15);
             this.lbl_topic.TabIndex = 3;
             // 
-            // button1
+            // btn_topic
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(130, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_topic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_topic.BackgroundImage")));
+            this.btn_topic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_topic.Enabled = false;
+            this.btn_topic.FlatAppearance.BorderSize = 0;
+            this.btn_topic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_topic.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_topic.Location = new System.Drawing.Point(130, 29);
+            this.btn_topic.Name = "btn_topic";
+            this.btn_topic.Size = new System.Drawing.Size(20, 20);
+            this.btn_topic.TabIndex = 1;
+            this.btn_topic.UseVisualStyleBackColor = true;
+            this.btn_topic.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -397,8 +401,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.rBtn_substitute);
+            this.panel1.Controls.Add(this.rBtn_regular);
             this.panel1.Controls.Add(this.lbl_title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -407,27 +411,33 @@
             this.panel1.Size = new System.Drawing.Size(592, 89);
             this.panel1.TabIndex = 0;
             // 
-            // radioButton2
+            // rBtn_substitute
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(201, 61);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(94, 19);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton1";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rBtn_substitute.AutoSize = true;
+            this.rBtn_substitute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtn_substitute.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rBtn_substitute.Location = new System.Drawing.Point(158, 61);
+            this.rBtn_substitute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rBtn_substitute.Name = "rBtn_substitute";
+            this.rBtn_substitute.Size = new System.Drawing.Size(121, 19);
+            this.rBtn_substitute.TabIndex = 4;
+            this.rBtn_substitute.Text = "Substitute Teacher\r\n";
+            this.rBtn_substitute.UseVisualStyleBackColor = true;
+            this.rBtn_substitute.CheckedChanged += new System.EventHandler(this.rBtn_regular_CheckedChanged_1);
             // 
-            // radioButton1
+            // rBtn_regular
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(28, 61);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(94, 19);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rBtn_regular.AutoSize = true;
+            this.rBtn_regular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rBtn_regular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rBtn_regular.Location = new System.Drawing.Point(12, 61);
+            this.rBtn_regular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rBtn_regular.Name = "rBtn_regular";
+            this.rBtn_regular.Size = new System.Drawing.Size(108, 19);
+            this.rBtn_regular.TabIndex = 3;
+            this.rBtn_regular.Text = "Regular Teacher";
+            this.rBtn_regular.UseVisualStyleBackColor = true;
+            this.rBtn_regular.CheckedChanged += new System.EventHandler(this.rBtn_regular_CheckedChanged_1);
             // 
             // lbl_title
             // 
@@ -515,16 +525,16 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private RadioButton rBtn_3;
+        private RadioButton rbtn_mark_all;
         private Label label6;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
         private Label lbl_title;
-        private TextBox txt_topic;
-        private Button button1;
+        private Button btn_topic;
         private Label lbl_topic;
         private Button btn_topic_cancel;
         private Button btn_topic_save;
         private Panel pnl_topic;
+        private TextBox txt_topic;
+        private RadioButton rBtn_substitute;
+        private RadioButton rBtn_regular;
     }
 }

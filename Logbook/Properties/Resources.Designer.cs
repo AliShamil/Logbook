@@ -93,6 +93,26 @@ namespace Logbook.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_comments_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-comments-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_comments_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-comments-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_diamond_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-diamond-96", resourceCulture);

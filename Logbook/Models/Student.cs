@@ -9,7 +9,7 @@ public class Student
     public string? LastName { get; set; }
     public string? FatherName { get; set; }
     public DateTime LastIn { get; set; }
-    public ParticipationStatus Status { get; set; }
+    public ParticipationStatus Status { get; set; } = ParticipationStatus.Unknown;
     public byte? LaboratoryWork { get; set; }
     public byte? ClassWork { get; set; }
     public byte? ActivityCrystal { get; set; }
