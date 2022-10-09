@@ -181,6 +181,7 @@ public partial class UC_Student : UserControl
         }
         btn_clear.Enabled =!btn_clear.Enabled;
         btn_comment.Enabled = !btn_comment.Enabled;
+
     }
 
     private void rBtn_1_CheckedChanged(object sender, EventArgs e)
@@ -205,8 +206,6 @@ public partial class UC_Student : UserControl
     {
         if (e.KeyChar == Convert.ToChar(Keys.Enter))
             btn_comment_save_Click(sender, e);
-        else if (e.KeyChar == Convert.ToChar(Keys.Back))
-            btn_comment_cancel_Click(sender, e);
 
     }
 }

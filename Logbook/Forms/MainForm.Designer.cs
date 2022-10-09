@@ -369,7 +369,7 @@
             // lbl_topic
             // 
             this.lbl_topic.AutoSize = true;
-            this.lbl_topic.Location = new System.Drawing.Point(17, 65);
+            this.lbl_topic.Location = new System.Drawing.Point(17, 63);
             this.lbl_topic.Name = "lbl_topic";
             this.lbl_topic.Size = new System.Drawing.Size(0, 15);
             this.lbl_topic.TabIndex = 3;

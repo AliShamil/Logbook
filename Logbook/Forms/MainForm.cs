@@ -72,12 +72,13 @@ public partial class MainForm : Form
         else
         {
             rbtn_mark_all.Enabled = false;
+            rbtn_mark_all.Checked =false;
             foreach (Control item in pnl_content.Controls)
             {
                 if (item is UC_Student uc)
                 {
                     uc.Enabled = false;
-                    uc.rBtn_3.Checked = true;
+                    
                 }
 
             }
@@ -120,7 +121,5 @@ public partial class MainForm : Form
         if (e.KeyChar == Convert.ToChar(Keys.Enter))
             btn_topic_save_Click(sender, e);
         
-        else if (e.KeyChar == Convert.ToChar(Keys.Back))
-            btn_topic_cancel_Click(sender, e);
     }
 }
