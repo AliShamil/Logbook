@@ -45,7 +45,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.cBox_class = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnl_diamond = new System.Windows.Forms.Panel();
             this.btn_diamond_2 = new System.Windows.Forms.Button();
             this.btn_diamond_3 = new System.Windows.Forms.Button();
             this.btn_diamond_1 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.pnl_diamond.SuspendLayout();
             this.panel7.SuspendLayout();
             this.pnl_comment.SuspendLayout();
             this.SuspendLayout();
@@ -183,6 +183,7 @@
             this.rBtn_3.Size = new System.Drawing.Size(13, 12);
             this.rBtn_3.TabIndex = 0;
             this.rBtn_3.UseVisualStyleBackColor = true;
+            this.rBtn_3.CheckedChanged += new System.EventHandler(this.rBtn_3_CheckedChanged);
             // 
             // rBtn_2
             // 
@@ -209,7 +210,9 @@
             this.rBtn_1.Name = "rBtn_1";
             this.rBtn_1.Size = new System.Drawing.Size(13, 12);
             this.rBtn_1.TabIndex = 0;
+            this.rBtn_1.Tag = "present";
             this.rBtn_1.UseVisualStyleBackColor = false;
+            this.rBtn_1.CheckedChanged += new System.EventHandler(this.rBtn_1_CheckedChanged);
             // 
             // panel4
             // 
@@ -227,6 +230,7 @@
             this.cBox_lab.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cBox_lab.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cBox_lab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBox_lab.Enabled = false;
             this.cBox_lab.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cBox_lab.FormattingEnabled = true;
             this.cBox_lab.Items.AddRange(new object[] {
@@ -264,6 +268,7 @@
             this.cBox_class.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cBox_class.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cBox_class.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBox_class.Enabled = false;
             this.cBox_class.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cBox_class.FormattingEnabled = true;
             this.cBox_class.Items.AddRange(new object[] {
@@ -288,7 +293,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.pnl_diamond);
             this.panel6.Controls.Add(this.btn_clear);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(821, 0);
@@ -297,15 +302,15 @@
             this.panel6.Size = new System.Drawing.Size(142, 55);
             this.panel6.TabIndex = 5;
             // 
-            // panel8
+            // pnl_diamond
             // 
-            this.panel8.Controls.Add(this.btn_diamond_2);
-            this.panel8.Controls.Add(this.btn_diamond_3);
-            this.panel8.Controls.Add(this.btn_diamond_1);
-            this.panel8.Location = new System.Drawing.Point(7, 11);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(93, 33);
-            this.panel8.TabIndex = 1;
+            this.pnl_diamond.Controls.Add(this.btn_diamond_2);
+            this.pnl_diamond.Controls.Add(this.btn_diamond_3);
+            this.pnl_diamond.Controls.Add(this.btn_diamond_1);
+            this.pnl_diamond.Location = new System.Drawing.Point(7, 11);
+            this.pnl_diamond.Name = "pnl_diamond";
+            this.pnl_diamond.Size = new System.Drawing.Size(93, 33);
+            this.pnl_diamond.TabIndex = 1;
             // 
             // btn_diamond_2
             // 
@@ -313,13 +318,16 @@
             this.btn_diamond_2.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
             this.btn_diamond_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_diamond_2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_diamond_2.Enabled = false;
             this.btn_diamond_2.FlatAppearance.BorderSize = 0;
             this.btn_diamond_2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_diamond_2.Location = new System.Drawing.Point(33, 2);
             this.btn_diamond_2.Name = "btn_diamond_2";
             this.btn_diamond_2.Size = new System.Drawing.Size(28, 28);
             this.btn_diamond_2.TabIndex = 0;
+            this.btn_diamond_2.Tag = "2";
             this.btn_diamond_2.UseVisualStyleBackColor = true;
+            this.btn_diamond_2.Click += new System.EventHandler(this.btn_diamond_1_Click);
             // 
             // btn_diamond_3
             // 
@@ -327,13 +335,16 @@
             this.btn_diamond_3.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
             this.btn_diamond_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_diamond_3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_diamond_3.Enabled = false;
             this.btn_diamond_3.FlatAppearance.BorderSize = 0;
             this.btn_diamond_3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_diamond_3.Location = new System.Drawing.Point(63, 2);
             this.btn_diamond_3.Name = "btn_diamond_3";
             this.btn_diamond_3.Size = new System.Drawing.Size(28, 28);
             this.btn_diamond_3.TabIndex = 0;
+            this.btn_diamond_3.Tag = "3";
             this.btn_diamond_3.UseVisualStyleBackColor = true;
+            this.btn_diamond_3.Click += new System.EventHandler(this.btn_diamond_1_Click);
             // 
             // btn_diamond_1
             // 
@@ -341,21 +352,24 @@
             this.btn_diamond_1.BackgroundImage = global::Logbook.Properties.Resources.output_onlinepngtools;
             this.btn_diamond_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_diamond_1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_diamond_1.Enabled = false;
             this.btn_diamond_1.FlatAppearance.BorderSize = 0;
             this.btn_diamond_1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_diamond_1.Location = new System.Drawing.Point(3, 2);
             this.btn_diamond_1.Name = "btn_diamond_1";
             this.btn_diamond_1.Size = new System.Drawing.Size(28, 28);
             this.btn_diamond_1.TabIndex = 0;
+            this.btn_diamond_1.Tag = "1";
             this.btn_diamond_1.UseVisualStyleBackColor = true;
+            this.btn_diamond_1.Click += new System.EventHandler(this.btn_diamond_1_Click);
             // 
             // btn_clear
             // 
-            this.btn_clear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_clear.BackColor = System.Drawing.Color.Transparent;
             this.btn_clear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_clear.BackgroundImage")));
             this.btn_clear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clear.Enabled = false;
             this.btn_clear.FlatAppearance.BorderSize = 0;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clear.Location = new System.Drawing.Point(103, 13);
@@ -363,6 +377,7 @@
             this.btn_clear.Size = new System.Drawing.Size(28, 28);
             this.btn_clear.TabIndex = 0;
             this.btn_clear.UseVisualStyleBackColor = false;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // panel7
             // 
@@ -404,14 +419,16 @@
             this.txt_comment.Size = new System.Drawing.Size(103, 49);
             this.txt_comment.TabIndex = 0;
             this.txt_comment.Visible = false;
+            this.txt_comment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_comment_KeyPress);
             // 
             // btn_comment
             // 
-            this.btn_comment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_comment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_comment.BackColor = System.Drawing.Color.Transparent;
             this.btn_comment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_comment.BackgroundImage")));
             this.btn_comment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_comment.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_comment.Enabled = false;
             this.btn_comment.FlatAppearance.BorderSize = 0;
             this.btn_comment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_comment.Location = new System.Drawing.Point(3, 12);
@@ -480,7 +497,7 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
+            this.pnl_diamond.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.pnl_comment.ResumeLayout(false);
@@ -503,7 +520,6 @@
         private Label lbl_fullname;
         private Label lbl_no;
         private Label lbl_lastIn;
-        private RadioButton rBtn_3;
         private RadioButton rBtn_2;
         private ComboBox cBox_lab;
         private ComboBox cBox_class;
@@ -511,7 +527,7 @@
         private Button btn_diamond_3;
         private Button btn_diamond_2;
         private Button btn_diamond_1;
-        private Panel panel8;
+        private Panel pnl_diamond;
         private Panel pnl_comment;
         private TextBox txt_comment;
         private Button btn_comment_save;
@@ -519,6 +535,7 @@
         private Button btn_comment;
         private Label lbl_comment;
         public Panel pnl_rbtn;
+        public RadioButton rBtn_3;
         public RadioButton rBtn_1;
     }
 }

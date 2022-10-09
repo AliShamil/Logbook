@@ -1,5 +1,6 @@
 ﻿using Logbook.Repository;
 using Logbook.UserControls;
+using Microsoft.VisualBasic.Devices;
 
 namespace Logbook.Forms;
 
@@ -7,19 +8,33 @@ namespace Logbook.Forms;
 
 public partial class MainForm : Form
 {
+    public Predicate<int> ChangeTotalDiamond { get; set; }
     public MainForm()
     {
         InitializeComponent();
+        ChangeTotalDiamond += (score) =>
+        {
+            int totalScore = int.Parse(lbl_crystal_count.Text);
+
+            if (totalScore - score < 0)
+                return false;
+
+            totalScore -= score;
+            lbl_crystal_count.Text = totalScore.ToString();
+
+            return true;
+        };
     }
 
-
+    
     private void MainForm_Load(object sender, EventArgs e)
     {
+        
         var students = FakeRepo.GetStudents();
 
         for (int i = students.Count - 1; i >= 0; i--)
         {
-            UC_Student uc = new(students[i]);
+            UC_Student uc = new(students[i], ChangeTotalDiamond);
             uc.Dock = DockStyle.Top;
             uc.Enabled = false;
             pnl_content.Controls.Add(uc);
@@ -60,7 +75,11 @@ public partial class MainForm : Form
             foreach (Control item in pnl_content.Controls)
             {
                 if (item is UC_Student uc)
+                {
                     uc.Enabled = false;
+                    uc.rBtn_3.Checked = true;
+                }
+
             }
         }
 
@@ -93,5 +112,15 @@ public partial class MainForm : Form
             }
 
         }
+    }
+
+ 
+    private void txt_topic_KeyPress(object sender, KeyPressEventArgs e)
+    {
+        if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            btn_topic_save_Click(sender, e);
+        
+        else if (e.KeyChar == Convert.ToChar(Keys.Back))
+            btn_topic_cancel_Click(sender, e);
     }
 }

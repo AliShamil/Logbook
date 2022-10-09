@@ -342,6 +342,7 @@
             this.txt_topic.Size = new System.Drawing.Size(160, 51);
             this.txt_topic.TabIndex = 2;
             this.txt_topic.Visible = false;
+            this.txt_topic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_topic_KeyPress);
             // 
             // btn_topic_cancel
             // 
