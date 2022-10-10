@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logbook", "Logbook\Logbook.csproj", "{9DA7EF54-14FF-41CD-B695-EAB06CB8024E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trackbar Task", "Trackbar Task\Trackbar Task.csproj", "{B98A48C1-BA39-4C94-9122-EB8A030C01A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9DA7EF54-14FF-41CD-B695-EAB06CB8024E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DA7EF54-14FF-41CD-B695-EAB06CB8024E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DA7EF54-14FF-41CD-B695-EAB06CB8024E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98A48C1-BA39-4C94-9122-EB8A030C01A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98A48C1-BA39-4C94-9122-EB8A030C01A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98A48C1-BA39-4C94-9122-EB8A030C01A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98A48C1-BA39-4C94-9122-EB8A030C01A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
